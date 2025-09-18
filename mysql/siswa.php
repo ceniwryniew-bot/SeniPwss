@@ -7,10 +7,13 @@
 </head>
 <body>
     <form action="" method="get">
-        <input type="search" name="cari" id="">
-        <input type="submit" value="Cari">
+        <input type="search" name="cari" id=""><input type="submit" value="cari">
+        <br>
     </form>
+    <br>
     <a href="create-siswa.php"><button>tambah siswa</button></a>
+    <br>
+    <br>
     <table border="1">
         <tr>
             <th>NO</th>
@@ -33,7 +36,7 @@
         
         $query = mysqli_query($koneksi, $sql);
         $no = 1;
-        while ($data = mysqli_fetch_array($query)) {
+        while ($data=mysqli_fetch_array($query)) {
         ?>
         <tr>
             <td><?php echo $no++; ?></td>
@@ -46,6 +49,9 @@
                 <a href="delete_siswa.php?nisn=<?=$data['nisn']?>">
                     <button>Hapus</button>
                 </a>
+                <a href="edit_siswa.php?nisn=<?=$data['nisn']?>">
+                    <button>Edit</button>
+                </a>              
             </td>
         </tr>
         <?php 

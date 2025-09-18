@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dokument</title>
 </head>
 <body>
     <h1>Create Siswa</h1>
@@ -32,7 +32,7 @@
             </tr>
             <tr>
                 <td>NO HANDPHONE</td>
-                <td><input type="text" name="nohp" iid=""></td>
+                <td><input type="text" name="nohp" id=""></td>
             </tr>
             <tr>
                 <td><input type="submit" value="SIMPAN" name="submit"></td>
@@ -52,7 +52,7 @@
         $sql = "INSERT INTO siswa VALUES ('$nisn', '$nama', '$jk', '$alamat', '$nohp')";
         $query = mysqli_query($koneksi, $sql);
         if($query){
-            echo "data berhasil disimpan";
+            echo "data berhasil diubah";
             ?>
             <a href="siswa.php">Lihat Data</a>
             <?php
